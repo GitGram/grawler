@@ -11,7 +11,7 @@ Requirements
 ============
 * Eclipse
 * Oracle Java JDK 1.7
-* MoreUnit plugin for tests (optional)
+* MoreUnit plugin for tests
 
 LICENSE
 ======
