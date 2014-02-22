@@ -1,4 +1,4 @@
-# grawler
+# grawler [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/GitGram/grawler/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 GitHub Crawler - uses GitHub API to crawl and organize data
 
