@@ -9,11 +9,15 @@ A `config.yml` is supplied as an input to grawler.
 ### Example YAML File
 
 ```yml
-all_users: false #If = true, all entities are saved, if = false, entities are not saved and if = a number, only that amount of records are saved into the database
-  user # gitgram looks for a 'user' key in the parent's json, if found that url is fetched and data is retrieved.
-  collaborator: 10 # A number 'n' implies only first n entries will be stored in the database.
-    some_other_attrib: false # true implies all entries will be stored and false implies none. A number means only those number of entries will be stored starting from the first.
-all_repos: true
+all_users: 
+    save: true # If = true, all entities are saved, else if = false, entities are not saved, else if = a number, only that amount of records are saved into the database
+    user: true # gitgram looks for a 'user' key in the parent's json, if found that url is fetched and data is retrieved. 
+    collaborators: 
+        save: 10 # A number 'n' implies only first n entries will be stored in the database.
+    some_other_attrib: # any other attribute may be defined.
+    save: false 
+all_repos: 
+    save: false
 ```
 
 ## Contributing
