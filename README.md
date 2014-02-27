@@ -27,3 +27,7 @@ all_repos: true
 ## LICENSE
 
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/GitGram/grawler/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
