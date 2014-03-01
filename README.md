@@ -4,11 +4,11 @@ GitHub Crawler - uses GitHub API to crawl and organize data
 
 ## Usage
 
-A `config.yml` is supplied as an input to grawler.
+A `config.json` is supplied as an input to grawler.
 
-### Example YAML File
+### Example JSON File
 
-```yml
+```json
 all_users: 
     save: true # If = true, all entities are saved, else if = false, entities are not saved, else if = a number, only that amount of records are saved into the database
     user: true # gitgram looks for a 'user' key in the parent's json, if found that url is fetched and data is retrieved. 
@@ -18,6 +18,24 @@ all_users:
     save: false 
 all_repos: 
     save: false
+
+{
+    "allUsers": {
+        "save": "true", # If = true, all entities are saved, else if = false, entities are not saved, else if = a number, only that amount of records are saved into the database
+        "user": {
+            "save": "true" # gitgram looks for a 'user' key in the parent's json, if found that url is fetched and data is retrieved.
+        },
+        "collaborators": {
+            "save": "10" # A number 'n' implies only first n entries will be stored in the database.
+        },
+        "someOtherAttribute": { # Any number of attributes may be specified
+            "save": "true"
+        }
+    },
+    "allRepos": {
+        "save": "true"
+    }
+}
 ```
 
 ## Contributing

@@ -2,10 +2,11 @@ package dev.gitgram.grawler.config;
 
 /**
  * Yaml Parser Class
- * @author mrdhat
+ * @author r4chi7
  *
- */
+*/
 
-public class YamlParser {
+
+public class ConfigParser {
 
 }
