@@ -11,14 +11,14 @@ A `config.json` is supplied as an input to grawler.
 ```json
 {
     "allUsers": {
-        "save": "true", # If = true, all entities are saved, else if = false, entities are not saved, else if = a number, only that amount of records are saved into the database
+        "save": "true",
         "user": {
-            "save": "true" # gitgram looks for a 'user' key in the parent's json, if found that url is fetched and data is retrieved.
+            "save": "true"
         },
         "collaborators": {
-            "save": "10" # A number 'n' implies only first n entries will be stored in the database.
+            "save": "10"
         },
-        "someOtherAttribute": { # Any number of attributes may be specified
+        "someOtherAttribute": {
             "save": "true"
         }
     },
@@ -27,6 +27,10 @@ A `config.json` is supplied as an input to grawler.
     }
 }
 ```
+
+* If "save" = true for a key, then all entities for that key is saved, if = false, entities are not saved, if = a number n, then n number of records are saved.
+* gitgram looks for a 'user' key in the parent's json, if found that url is fetched and data is retrieved.
+* Any number of attributes may be specified.
 
 ## Contributing
 
