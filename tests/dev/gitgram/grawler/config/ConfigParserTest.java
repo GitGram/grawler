@@ -1,14 +1,14 @@
 package dev.gitgram.grawler.config;
 
 
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertEquals;
 
-import java.io.File;
 import java.net.URL;
 
 import org.json.simple.JSONObject;
 import org.junit.Test;
 
+@SuppressWarnings("unchecked")
 public class ConfigParserTest {
 
 	@Test
@@ -17,7 +17,29 @@ public class ConfigParserTest {
 		URL url = getClass().getResource("testJson.json");
 		String fileName = url.getPath();
 		JSONObject testResult = parserTest.parse(fileName);
-		assertNotNull("Oops!", testResult);
+		JSONObject expectedResult = createExpectedResult();
+		assertEquals("Parsed result should be same as expected result", expectedResult, testResult);
+	}
+
+	private JSONObject createExpectedResult() {
+		JSONObject saveObject = new JSONObject();
+		JSONObject saveObject1 = new JSONObject();
+		JSONObject userObject = new JSONObject();
+		JSONObject allUserObject = new JSONObject();
+		JSONObject resultObject = new JSONObject();
+		
+		saveObject.put("save", "true");
+		userObject.put("user", saveObject);
+		resultObject.put("allRepos", saveObject);
+		
+		saveObject1.put("save", "10");
+		allUserObject.put("user", saveObject);
+		allUserObject.put("collaborators", saveObject1);
+		allUserObject.put("save", "true");
+		
+		resultObject.put("allUsers", allUserObject);
+		
+		return resultObject;
 	}
 
 }
