@@ -1,0 +1,17 @@
+{
+    "allUsers": {
+        "save": "true",
+        "user": {
+            "save": "true"
+        },
+        "collaborators": {
+            "save": "10"
+        },
+        "someOtherAttribute": {
+            "save": "true"
+        }
+    },
+    "allRepos": {
+        "save": "true"
+    }
+}
