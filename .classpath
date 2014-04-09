@@ -11,5 +11,6 @@
 	<classpathentry kind="lib" path="lib/cascading-xml-2.5.3.jar"/>
 	<classpathentry kind="lib" path="lib/json-simple-1.1.1.jar"/>
 	<classpathentry kind="lib" path="lib/org.json-20120521.jar"/>
+	<classpathentry kind="lib" path="lib/hadoop-mapreduce-client-core-2.2.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

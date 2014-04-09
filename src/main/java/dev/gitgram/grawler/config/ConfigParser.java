@@ -1,4 +1,4 @@
-package dev.gitgram.grawler.config;
+package main.java.dev.gitgram.grawler.config;
 
 import java.io.FileReader;
 import org.json.simple.JSONArray;
